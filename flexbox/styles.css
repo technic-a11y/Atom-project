@@ -131,3 +131,6 @@
 .signup {
     margin-left: auto;
 }
+    /* "margin-left: auto" property pushes the item to the far right of the container. */
+    /* "auto-marigns" in flexbox are used as a divider to align items left/right in the container- to avoid inserting
+    'extra divs' in HTML. */
