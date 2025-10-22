@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu-container {
+    color: #fff;
+    background-color: #5995DA;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+/* 1- Horizontal-alignment in flexbox: */
+    /* justify-content: is used to align the items of the container. */
+    /* flex-start and flex-end inside 'justify-content' property move items right
+    and left */
+.menu {
+    border: 1px solid #fff;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+    /* Similarly, to flex start and end - "space-around" moves items to the entire
+    width of the container. "space-between" individually moves the items nested in the container. */
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login {
+    margin-left: 20px;
+}
+    /* To alter the already grouped elements in the html, nesting more flex-containers
+    are necessary. It aligns the elements where we want them to be. */
+
+/* 2- Vertical-alignment in flexbox: */
+.header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    /* align-items: is used to align the items vertically in the container. */
+    /* center, flex-start and flex-end inside 'align-items' property move items
+    to center, top and bottom respectively. */
+    /* In terms of stretch option, it aligns the items to the maximum height of
+    the container. */
+ 
+
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+}
+.photo-grid {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+    /* "flex-wrap" property with 'wrap or nowrap' options prohibits items to float around, and
+    combines them consistent with each other. */
+    /* By-default, flex-box aligns the items horizontally, even with vertical alignment due to the
+    behavior of running out of space horizontally. By using, "flex-direction" with 'column/row' options,
+    it specifies the structural alignment of the items. */
+    /* You can see there are two items alignment options (justify-content and align-items), one in main-container and
+    the other in its child, is due to the "flex-direction" makes the content to respond to it defying the main-container's
+    alignment. The "align-items" property lets you change that.  */
+    /* Furthermore, "flex-direction"  property with 'row-reverse/column-reverse' options changes the orders of the rows and 
+    columns in which they appear. This reduces the reliance on the movement of HTML markups.*/
+.photo-grid-item {
+    border: 1px solid #fff;
+    width: 300px;
+    height: 300px;
+}
+.first-item {
+    order: 1;
+}
+.last-item {
+    order: -1;
+}
+    /* "order" property with numerical values changes the order of the items in the container.
+    The lower the number, the earlier the item appears in the container. By-default, all items
+    have "order: 0" property. */
+
+.social,
+.subscribe {
+    align-self: flex-end;
+    margin: 20px;
+}
+    /* "align-self" property with 'flex-start, flex-end, center, stretch' options overrides the
+    "align-items" property of the parent container for the specific item. */
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1;
+}
+    /* "flex" property with numerical values defines how much space an item will take (grow or shrink)
+    relative to the other items in the container. By-default, all items have "flex: 0"
+    property. */
+.footer-three {
+    flex: 2;
+}
+    /* Here, the third footer item takes twice as much space as the other two items. */
+    /* In short, 'flex' distributes space inside the item as contrary to 'justify-content' property, which
+    is relative among item and other items. */
+.footer-one,
+.footer-three {
+    background-color: #5995DA;
+    flex: initial;
+    width: 300px;
+}
+    /* "flex: initial" property resets the 'flex' behavior of the item to its original size. */
+    /* Otherwise, it would inherit the 'flex:1' property from footer-item box. */
+    /* It allows to stretch or shrink (flexible and fixed-width) items.  */
+.signup {
+    margin-left: auto;
+}
