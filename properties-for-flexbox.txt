@@ -1,0 +1,10 @@
+flex-flow is combined property aka. shorthand for flex wrap and direction.
+Syntax:
+    .container {
+        flex-flow: column wrap;
+    }
+
+"align-content" moves the items as a whole just as justify-content but on cross-axis. It works only
+in the presence of wrap 0r reverse-wrap properties.
+
+"gap-column/gap-row" individually creates space between specified columns and rows.
