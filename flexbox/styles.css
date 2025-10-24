@@ -11,7 +11,7 @@
     justify-content: center;
 }
 /* 1- Horizontal-alignment in flexbox: */
-    /* justify-content: is used to align the items of the container. */
+    /* justify-content: is used to align the items (grouped together) in the container. */
     /* flex-start and flex-end inside 'justify-content' property move items right
     and left */
 .menu {
@@ -49,17 +49,20 @@
     justify-content: space-between;
     align-items: center;
 }
-    /* align-items: is used to align the items vertically in the container. */
+    /* align-items: is used to align the items vertically (individually) in the container. */
     /* center, flex-start and flex-end inside 'align-items' property move items
     to center, top and bottom respectively. */
     /* In terms of stretch option, it aligns the items to the maximum height of
     the container. */
+    /* Both align-items and justify-content will opposite their behavior in presence of 'flex-direction' property.  */
  
 
 .photo-grid-container {
     display: flex;
     justify-content: center;
+   
 }
+    
 .photo-grid {
     width: 900px;
     display: flex;
@@ -67,6 +70,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    gap: 8px;               
 }
     /* "flex-wrap" property with 'wrap or nowrap' options prohibits items to float around, and
     combines them consistent with each other. */
@@ -78,6 +82,8 @@
     alignment. The "align-items" property lets you change that.  */
     /* Furthermore, "flex-direction"  property with 'row-reverse/column-reverse' options changes the orders of the rows and 
     columns in which they appear. This reduces the reliance on the movement of HTML markups.*/
+
+    /* "gap" property works as a margin but more profound in specifying space between items as compared to margins. */
 .photo-grid-item {
     border: 1px solid #fff;
     width: 300px;
@@ -119,6 +125,15 @@
     /* Here, the third footer item takes twice as much space as the other two items. */
     /* In short, 'flex' distributes space inside the item as contrary to 'justify-content' property, which
     is relative among item and other items. */
+    /* Remember, "flex" property can be assigned multiple values such as (grow,shrink,basis) or you can specify
+    each with 'flex-grow,shrink or basis' properties. */
+    /* Furthermore, flex-basis value sets the base for the item, fromwhere it will shrink or grow. flex-basis acts as a
+     width in flexbox because the width property acts differently to primary axis. */
+
+     /* To prevent shrinking value should be set to 0, and "border-radius" proeprty should be added.*/
+     /* Besides shrink property, min-width/min-height keeps the content aligned when shrinked which is cool as the items don't overflow.
+     Keypoint: Proceed with caution to override already built in min-width property by adding one in text containing flex children, as it can make 
+     content overflow much worse. */
 .footer-one,
 .footer-three {
     background-color: #5995DA;
@@ -128,9 +143,14 @@
     /* "flex: initial" property resets the 'flex' behavior of the item to its original size. */
     /* Otherwise, it would inherit the 'flex:1' property from footer-item box. */
     /* It allows to stretch or shrink (flexible and fixed-width) items.  */
+    /* In other cases, 'none' option will limit the items behavior as proposed in height and width properties. */
+    /* 'flex:<number[1,oo]> 1 0', makes items fully flexible resulting baseline to 0, each item evenly recieves the 
+    proportion of available extended space. */
 .signup {
     margin-left: auto;
 }
     /* "margin-left: auto" property pushes the item to the far right of the container. */
     /* "auto-marigns" in flexbox are used as a divider to align items left/right in the container- to avoid inserting
     'extra divs' in HTML. */
+    /* In general 'auto' value absorbs the positive space in the container but thats for flex:grow property it is different 
+    in margins.*/
