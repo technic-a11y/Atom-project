@@ -1,0 +1,23 @@
+flex-direction: row-reverse;
+/ When using this it will change the direction of "justify-content" and "align-items", flex-start and flex-end options as well.
+  Flex-start would become flex-end and vice versa./
+
+/ Similarly, flex-direction:column; makes the align-items maneuvre horizontally and justify-content vertically./
+
+order:-1 0 1;
+/ individually carries an item to its place./
+
+align-self: flex-start;
+/has same properties as align-items and performs similar to order property./
+
+? If width and height of a value is set as auto then flex-basis would use the value content instead of auto.?
+
+align-content:flex-start;
+/contols alignment of lines between items across cross axis./
+?comes in handy when using flex-wrap property.?
+
+row-gap:
+/property sets gap between items when flex-wrap property is set to wrap./
+
+column-gap:
+/property sets gap between items in a row./
